@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#120916">
+  <title>Anurag's Virtual Birthday Party 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app" aria-live="polite">
+  <section id="entry" class="screen screen-entry active">
+    <div class="bg bg-entry"></div>
+    <div class="entry-overlay">
+      <div class="entry-card">
+        <p class="eyebrow">A little invitation for you ✨</p>
+        <h1>Welcome in the virtual<br>birthday party of Anurag 🎉</h1>
+        <p class="sub">Enter your name and join the celebration ❤️</p>
+
+        <form id="guestForm" novalidate>
+          <label class="sr-only" for="guestName">Your name</label>
+          <input id="guestName" name="name" maxlength="40" autocomplete="name"
+                 placeholder="Enter your name" required>
+
+          <label class="sr-only" for="relation">Your relation to Anurag</label>
+          <select id="relation" name="relation" required>
+            <option value="">Select your relation</option>
+            <option value="Brother">👦 Brother</option>
+            <option value="Sister">👧 Sister</option>
+            <option value="Cousin">🫂 Cousin</option>
+            <option value="Friend">🎉 Friend</option>
+          </select>
+
+          <button class="primary" type="submit">Enter Party 🎉</button>
+          <p id="formError" class="error" role="alert"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="celebration" class="screen">
+    <div class="bg bg-celebration"></div>
+    <div class="screen-shade"></div>
+    <div class="celebrate-copy">
+      <div class="tiny">THE PARTY HAS BEGUN ✨</div>
+      <h2>Welcome to the celebration!</h2>
+      <p id="personalLine"></p>
+    </div>
+  </section>
+
+  <section id="welcome" class="screen">
+    <div class="bg bg-welcome"></div>
+    <div class="screen-shade"></div>
+    <div class="welcome-copy">
+      <div class="welcome-pill">🙏🏻</div>
+      <h2 id="welcomeTitle">Namaste!</h2>
+      <p>Welcome to my Birthday Party! 🥳</p>
+      <span>Glad you're here! ❤️</span>
+    </div>
+  </section>
+
+  <section id="countdown" class="screen">
+    <div class="bg bg-celebration"></div>
+    <div class="screen-shade"></div>
+    <div class="countdown-wrap">
+      <p class="tiny">CAKE MOMENT</p>
+      <h2 id="countdownTitle">Cake Cutting Time 🎂</h2>
+      <div id="countdownNumber" class="countdown-number">30</div>
+      <p id="countdownHint">Get ready… the magic is about to begin ✨</p>
+      <div id="balloons" class="balloons" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section id="cake" class="screen">
+    <div class="bg bg-celebration"></div>
+    <div class="screen-shade"></div>
+    <div class="cake-scene">
+      <div class="burst" aria-hidden="true">🎈 🎉 🎈</div>
+      <div class="cake-emoji">🎂</div>
+      <h2>Make a wish! ✨</h2>
+      <p>The cake is ready to be shared.</p>
+      <div class="piece">🍰</div>
+      <p class="piece-text">A little piece for you ❤️</p>
+      <button id="toWish" class="primary">Send a Birthday Wish 💌</button>
+      <button id="skipWish" class="ghost">Skip</button>
+    </div>
+  </section>
+
+  <section id="wish" class="screen">
+    <div class="bg bg-welcome"></div>
+    <div class="screen-shade"></div>
+    <div class="wish-card">
+      <div class="welcome-pill">💌</div>
+      <h2>Write a little wish for Anurag</h2>
+      <p>Anything you want to say on his birthday ❤️</p>
+      <textarea id="wishText" maxlength="500" placeholder="Write your birthday wish here…"></textarea>
+      <div class="wish-actions">
+        <button id="sendWish" class="primary">Send Wish 💌</button>
+        <button id="skipWish2" class="ghost">Skip</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="thanks" class="screen">
+    <div class="bg bg-welcome"></div>
+    <div class="screen-shade"></div>
+    <div class="thanks-card">
+      <div class="confetti-line">🎉 ✨ 🥳 ✨ 🎉</div>
+      <h2>Tysm for joining the party! 🥳</h2>
+      <p id="thanksPersonal"></p>
+      <div class="heart">❤️</div>
+      <p class="small">See you again at the next celebration.</p>
+    </div>
+  </section>
+
+  <audio id="music" preload="auto" loop playsinline>
+    <source src="assets/birthday-song.mp3" type="audio/mpeg">
+  </audio>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
